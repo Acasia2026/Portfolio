@@ -177,20 +177,20 @@ export default function SkillsSection() {
             {filteredSkills.map((skill) => (
               <div
                 key={skill.id}
-                className="paper-card group cursor-pointer border border-[#eadecf] bg-[#fffdf9] hover:border-[#e06d53]/50 transition-all duration-300"
+                className="skills-static-card group"
               >
                 <div className="flex items-start gap-4">
                   <div
-                    className="p-2.5 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300"
+                    className="p-2.5 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-white/90 transition-all duration-300"
                     style={{ backgroundColor: skill.bgColor }}
                   >
                     <img src={skill.iconUrl} alt={skill.name} className="w-9 h-9 object-contain" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-[#2d2424] group-hover:text-[#e06d53] transition-colors">
+                    <h3 className="font-bold text-lg text-[#2d2424] group-hover:text-white transition-colors duration-300">
                       {skill.name}
                     </h3>
-                    <p className="text-xs text-[#6e5e5e] mt-1 leading-relaxed">
+                    <p className="text-xs text-[#6e5e5e] group-hover:text-white/90 mt-1 leading-relaxed transition-colors duration-300">
                       {skill.desc}
                     </p>
                   </div>

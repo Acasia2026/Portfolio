@@ -8,15 +8,15 @@ export default function HeroSection({ onOpenContact, onOpenCV }) {
       <div className="absolute bottom-12 right-12 text-[#e06d53] opacity-40 animate-pulse-slow pointer-events-none">
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
         {/* Left Column: Polaroid Avatar Card */}
-        <div className="lg:col-span-5 flex flex-col items-center relative">
-          <div className="relative w-full max-w-sm">
+        <div className="lg:col-span-4 flex flex-col items-center relative">
+          <div className="relative w-full max-w-[285px]">
             {/* Washi Tape on top left */}
             <div className="washi-tape washi-tape-top-left"></div>
 
             {/* Glassmorphic Polaroid Frame */}
-            <div className="polaroid-card glass-card bg-white/75 backdrop-blur-md rounded-2xl p-3 sm:p-4 pb-2 shadow-2xl border border-white/80 transform -rotate-2 hover:rotate-0 transition-all duration-300">
+            <div className="polaroid-card glass-card bg-white/75 backdrop-blur-md rounded-2xl p-2.5 sm:p-3 pb-2 shadow-xl border border-white/80 transform -rotate-2 hover:rotate-0 transition-all duration-300">
               {/* Polaroid Image Container */}
               <div className="w-full aspect-square rounded-xl overflow-hidden bg-gradient-to-tr from-[#fceade] via-[#f7d6c8] to-[#f9e5d8] relative flex items-center justify-center border border-[#ebdcd0] shadow-inner">
 
@@ -29,8 +29,8 @@ export default function HeroSection({ onOpenContact, onOpenCV }) {
 
               </div>
 
-              <div className="mt-3 text-center border-t border-[#eadecf]/60 pt-2.5">
-                <div className="font-sans font-black text-xl sm:text-2xl tracking-widest text-[#4a3b32] uppercase py-2 px-4 bg-[#fef8ed] rounded-xl border border-[#f5e2ad] block shadow-sm">
+              <div className="mt-2.5 text-center border-t border-[#eadecf]/60 pt-2">
+                <div className="font-sans font-black text-base sm:text-lg tracking-widest text-[#4a3b32] uppercase py-1.5 px-3 bg-[#fef8ed] rounded-xl border border-[#f5e2ad] block shadow-xs">
                   WEB DEVELOPER
                 </div>
               </div>
@@ -39,7 +39,7 @@ export default function HeroSection({ onOpenContact, onOpenCV }) {
         </div>
 
         {/* Right Column: Handwritten Greeting & Bio */}
-        <div className="lg:col-span-7 flex flex-col justify-center space-y-5 text-center lg:text-left py-4 px-5 sm:px-7 bg-white/70 backdrop-blur-md rounded-3xl border border-white/90 shadow-sm">
+        <div className="lg:col-span-8 flex flex-col justify-center space-y-5 text-center lg:text-left py-5 px-6 sm:px-8 bg-white/70 backdrop-blur-md rounded-3xl border border-white/90 shadow-sm">
           {/* Cursive Hello */}
           <div className="inline-block relative">
             <span className="font-handwriting text-2xl sm:text-3xl text-[#6e5e5e] block">
@@ -68,15 +68,14 @@ export default function HeroSection({ onOpenContact, onOpenCV }) {
           </div>
 
           {/* Bio Description */}
-          <p className="text-base sm:text-lg md:text-xl text-[#6e5e5e] max-w-xl mx-auto lg:mx-0 leading font-sans pt-1">
-            Full Stack Developer skilled in Django, React, Node.js, and cloud deployment. Experienced across the full development lifecycle, transforming complex ideas into clean, scalable, and production-ready web applications.
+          <p className="text-base sm:text-base md:text-lg text-[#6e5e5e] max-w-2xl mx-auto lg:mx-0 leading font-sans pt-1">
+            Full stack developer building scalable web apps with Django, React, Next.js, and Node.js. I handle the whole stack from database design and sleek UI components to cloud deployment turning ideas into production-ready code that just works.
           </p>
 
           {/* CTA Action Buttons */}
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-3">
             <a href="#projects" className="btn-primary group">
               <span>View My Work</span>
-              <ArrowDownRight className="w-5 h-5 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform" />
             </a>
 
             <a
@@ -86,7 +85,6 @@ export default function HeroSection({ onOpenContact, onOpenCV }) {
               rel="noreferrer"
               className="btn-secondary group"
             >
-              <Paperclip className="w-4 h-4 text-[#6e5e5e] group-hover:rotate-12 transition-transform" />
               <span>Download CV</span>
             </a>
           </div>

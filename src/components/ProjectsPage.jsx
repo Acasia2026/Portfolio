@@ -127,7 +127,7 @@ export default function ProjectsPage({ onOpenProjectDemo, onNavigateHome }) {
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-[#2d2424]/60 backdrop-blur-xs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-2">
                     <span className="text-white font-semibold text-xs bg-[#e06d53] px-3.5 py-1.5 rounded-full shadow-lg text-center">
-                      View Screenshots ({project.gallery.length}) ✨
+                      View Screenshots ({project.gallery.length})
                     </span>
                   </div>
                 </div>

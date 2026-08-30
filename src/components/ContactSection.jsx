@@ -67,7 +67,7 @@ export default function ContactSection() {
         ) : (
           <form onSubmit={handleSubmit} className="space-y-2.5 mb-4">
             <div>
-              <label className="block text-[11px] font-bold text-[#2d2424] mb-1">
+              <label className="block text-[14px] font-bold text-[#2d2424] mb-1">
                 Name
               </label>
               <input
@@ -81,7 +81,7 @@ export default function ContactSection() {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold text-[#2d2424] mb-1">
+              <label className="block text-[14px] font-bold text-[#2d2424] mb-1">
                 Email
               </label>
               <input
@@ -95,7 +95,7 @@ export default function ContactSection() {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold text-[#2d2424] mb-1">
+              <label className="block text-[14px] font-bold text-[#2d2424] mb-1">
                 Message
               </label>
               <textarea
