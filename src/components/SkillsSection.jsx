@@ -130,6 +130,15 @@ export default function SkillsSection() {
       color: '#8b5cf6',
       bgColor: '#f5f3ff',
       iconUrl: 'https://img.icons8.com/color/96/artificial-intelligence.png'
+    },
+    {
+      id: 15,
+      name: 'AWS/Azure',
+      category: 'Tools',
+      desc: 'Cloud infrastructure & serverless deployment.',
+      color: '#ff9900',
+      bgColor: '#fff4e5',
+      iconUrl: 'https://img.icons8.com/color/96/amazon-web-services.png'
     }
   ];
 
