@@ -110,11 +110,10 @@ export default function Modals({
                       <button
                         key={i}
                         onClick={() => setSelectedImgIndex(i)}
-                        className={`relative rounded-lg overflow-hidden shrink-0 border-2 transition-all ${
-                          selectedImgIndex === i
-                            ? 'border-[#e06d53] scale-105 shadow-sm'
-                            : 'border-transparent opacity-70 hover:opacity-100'
-                        }`}
+                        className={`relative rounded-lg overflow-hidden shrink-0 border-2 transition-all ${selectedImgIndex === i
+                          ? 'border-[#e06d53] scale-105 shadow-sm'
+                          : 'border-transparent opacity-70 hover:opacity-100'
+                          }`}
                         title={imgUrl.split('/').pop().replace('.png', '')}
                       >
                         <img
@@ -201,7 +200,7 @@ export default function Modals({
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Alex Morgan"
+                      placeholder="e.g. Sia"
                       value={formState.name}
                       onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                       className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-[#eadecf] bg-[#faf5ef]/60 focus:outline-none focus:border-[#e06d53] focus:bg-white transition-all"
@@ -213,7 +212,7 @@ export default function Modals({
                     <input
                       type="email"
                       required
-                      placeholder="alex@example.com"
+                      placeholder="[EMAIL_ADDRESS]"
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                       className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-[#eadecf] bg-[#faf5ef]/60 focus:outline-none focus:border-[#e06d53] focus:bg-white transition-all"
@@ -225,7 +224,7 @@ export default function Modals({
                     <textarea
                       required
                       rows="3"
-                      placeholder="Hi Renuka, I'd love to talk about..."
+                      placeholder="Hi Renuka, I'd love to collaborate"
                       value={formState.message}
                       onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                       className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-[#eadecf] bg-[#faf5ef]/60 focus:outline-none focus:border-[#e06d53] focus:bg-white transition-all resize-none"
