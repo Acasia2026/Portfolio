@@ -38,23 +38,7 @@ export default function Navbar({ currentPage = 'home', onNavigate, onOpenContact
   return (
     <header className="sticky top-0 z-50 py-3.5 px-4 sm:px-6 backdrop-blur-md bg-[#faf5ef]/85 border-b border-[#eadecf]/50 transition-all">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-        {/* Brand Logo / Name */}
-        <a
-          href="#home"
-          onClick={(e) => {
-            e.preventDefault();
-            if (currentPage !== 'home') {
-              onNavigate('home');
-            }
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="font-handwriting font-bold text-2xl text-[#2d2424] hover:text-[#e06d53] transition-colors flex items-center gap-1.5"
-        >
-          <span>Renuka</span>
-          <span className="text-[#e06d53] text-sm">✦</span>
-        </a>
-
-        {/* Desktop Navigation Links (Center/Left) */}
+        {/* Desktop Navigation Links (Left Side) */}
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">
           {navLinks.map((link) => (
             <a
@@ -90,11 +74,31 @@ export default function Navbar({ currentPage = 'home', onNavigate, onOpenContact
           </button>
         </div>
 
-        {/* Mobile Hamburger Toggle Button (<768px) */}
-        <div className="md:hidden flex items-center">
+        {/* Mobile Header Top Bar (<768px): LinkedIn + Let's Connect + Hamburger Menu Toggle */}
+        <div className="md:hidden flex items-center justify-between w-full gap-2">
+          <div className="flex items-center gap-2">
+            <a
+              href="https://www.linkedin.com/in/renuka-dhoundiyal01/"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-secondary text-[11px] sm:text-xs py-1.5 px-3 flex items-center gap-1.5 shadow-2xs"
+              title="LinkedIn Profile"
+            >
+              <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn" className="w-3.5 h-3.5 object-contain shrink-0" />
+              <span>LinkedIn</span>
+            </a>
+
+            <button
+              onClick={onOpenContact}
+              className="btn-primary text-[11px] sm:text-xs py-1.5 px-3.5 shadow-xs"
+            >
+              Let's Connect
+            </button>
+          </div>
+
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="p-2 text-[#2d2424] hover:text-[#e06d53] focus:outline-none rounded-lg hover:bg-[#faf5ef] transition-colors"
+            className="p-1.5 text-[#2d2424] hover:text-[#e06d53] focus:outline-none rounded-lg hover:bg-[#faf5ef] transition-colors shrink-0"
             aria-label="Toggle Navigation Menu"
           >
             {mobileOpen ? <X className="w-6 h-6 text-[#e06d53]" /> : <Menu className="w-6 h-6" />}

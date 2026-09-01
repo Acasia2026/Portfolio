@@ -32,29 +32,29 @@ export default function ExperienceSection() {
           <span>💼</span> Work Experience
         </h3>
 
-        {/* Experience Timeline Cards: 1 Column on Mobile/Tablet (<1024px), 3 Columns on Desktop (>1024px) */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 relative">
+        {/* 1 Experience Card Per Row Stack */}
+        <div className="flex flex-col gap-4 sm:gap-5 relative">
           {experiences.map((exp, idx) => (
             <div
               key={idx}
-              className="p-4 rounded-xl border border-[#eadecf] bg-[#fffdf9] hover:bg-white hover:border-[#e06d53]/40 transition-all duration-200 group flex flex-col justify-between relative shadow-xs"
+              className="p-4 sm:p-5 rounded-2xl border border-[#eadecf] bg-[#fffdf9] hover:bg-white hover:border-[#e06d53]/40 transition-all duration-200 group flex flex-col justify-between relative shadow-xs"
             >
               <div>
-                <div className="flex items-start justify-between gap-2 mb-1.5">
-                  <h4 className="font-bold text-base text-[#2d2424] group-hover:text-[#e06d53] transition-colors leading-snug">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                  <h4 className="font-bold text-base sm:text-xl text-[#2d2424] group-hover:text-[#e06d53] transition-colors leading-snug">
                     {exp.role}
                   </h4>
-                  <span className="text-[11px] font-semibold text-[#e06d53] bg-[#fbebe8] px-2.5 py-0.5 rounded-full shrink-0">
+                  <span className="text-xs font-semibold text-[#e06d53] bg-[#fbebe8] px-3 py-1 rounded-full shrink-0">
                     {exp.period}
                   </span>
                 </div>
 
-                <p className="text-xs font-semibold text-[#6e5e5e] mb-3 flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#e06d53]"></span>
+                <p className="text-xs sm:text-sm font-semibold text-[#6e5e5e] mb-2.5 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#e06d53]"></span>
                   {exp.company}
                 </p>
 
-                <p className="text-xs text-[#6e5e5e] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#5c4e4e] leading-relaxed">
                   {exp.desc}
                 </p>
               </div>

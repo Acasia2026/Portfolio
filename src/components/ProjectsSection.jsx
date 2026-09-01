@@ -84,8 +84,8 @@ export default function ProjectsSection({ onOpenProjectDemo, onNavigateProjects 
           </button>
         </div>
 
-        {/* Responsive Grid: Mobile (1-col), Tablet (2-col), Desktop (3-col) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 items-stretch">
+        {/* Responsive Grid: 1 card per row on mobile (grid-cols-1), 3 on desktop (lg:grid-cols-3) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {projects.map((project) => (
             <div
               key={project.id}

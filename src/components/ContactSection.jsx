@@ -65,9 +65,9 @@ export default function ContactSection() {
             <p className="font-normal text-[#4e6e58]">Thank you for reaching out. I'll get back to you soon!</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-2.5 mb-4">
+          <form onSubmit={handleSubmit} className="space-y-3.5 mb-5">
             <div>
-              <label className="block text-[14px] font-bold text-[#2d2424] mb-1">
+              <label className="block text-sm sm:text-base font-bold text-[#2d2424] mb-1">
                 Name
               </label>
               <input
@@ -76,12 +76,12 @@ export default function ContactSection() {
                 value={formState.name}
                 onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                 placeholder="Your Name"
-                className="w-full px-3 py-1.5 text-xs rounded-lg border border-[#eadecf] bg-[#fffdf9] focus:outline-none focus:border-[#e06d53] focus:ring-1 focus:ring-[#e06d53] transition-colors"
+                className="w-full px-3.5 py-3 text-base rounded-xl border border-[#eadecf] bg-[#fffdf9] focus:outline-none focus:border-[#e06d53] focus:ring-1 focus:ring-[#e06d53] transition-colors placeholder:text-sm text-[#2d2424]"
               />
             </div>
 
             <div>
-              <label className="block text-[14px] font-bold text-[#2d2424] mb-1">
+              <label className="block text-sm sm:text-base font-bold text-[#2d2424] mb-1">
                 Email
               </label>
               <input
@@ -90,45 +90,45 @@ export default function ContactSection() {
                 value={formState.email}
                 onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                 placeholder="your.email@example.com"
-                className="w-full px-3 py-1.5 text-xs rounded-lg border border-[#eadecf] bg-[#fffdf9] focus:outline-none focus:border-[#e06d53] focus:ring-1 focus:ring-[#e06d53] transition-colors"
+                className="w-full px-3.5 py-3 text-base rounded-xl border border-[#eadecf] bg-[#fffdf9] focus:outline-none focus:border-[#e06d53] focus:ring-1 focus:ring-[#e06d53] transition-colors placeholder:text-sm text-[#2d2424]"
               />
             </div>
 
             <div>
-              <label className="block text-[14px] font-bold text-[#2d2424] mb-1">
+              <label className="block text-sm sm:text-base font-bold text-[#2d2424] mb-1">
                 Message
               </label>
               <textarea
-                rows="2"
+                rows="3"
                 required
                 value={formState.message}
                 onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                 placeholder="Let's build something great..."
-                className="w-full px-3 py-1.5 text-xs rounded-lg border border-[#eadecf] bg-[#fffdf9] focus:outline-none focus:border-[#e06d53] focus:ring-1 focus:ring-[#e06d53] transition-colors resize-none"
+                className="w-full px-3.5 py-3 text-base rounded-xl border border-[#eadecf] bg-[#fffdf9] focus:outline-none focus:border-[#e06d53] focus:ring-1 focus:ring-[#e06d53] transition-colors placeholder:text-sm text-[#2d2424] resize-none"
               ></textarea>
             </div>
 
             <button
               type="submit"
               disabled={isSubmitting}
-              className="btn-primary w-full py-2 text-xs font-bold justify-center shadow-md disabled:opacity-60"
+              className="btn-primary w-full py-3 text-sm sm:text-base font-bold justify-center shadow-md disabled:opacity-60"
             >
               {isSubmitting ? 'Sending to acasiadl01@gmail.com...' : 'Send Message'}
             </button>
           </form>
         )}
 
-        {/* Direct Connect Buttons: Stack vertically on Mobile (<640px), 3-col on Tablet/Desktop */}
-        <div className="pt-3 border-t border-[#f0e6dc] space-y-2">
-          <span className="block text-[10px] font-bold text-[#6e5e5e] uppercase tracking-wider text-center">
+        {/* Direct Connect Buttons: 1-col on mobile, 3-col on desktop */}
+        <div className="pt-3.5 border-t border-[#f0e6dc] space-y-2.5">
+          <span className="block text-xs font-bold text-[#6e5e5e] uppercase tracking-wider text-center">
             Or Connect Directly
           </span>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
             <a
               href="mailto:acasiadl01@gmail.com"
               onClick={handleEmailClick}
-              className={`btn-secondary py-2 px-3 text-xs justify-center text-center transition-all ${isCopied ? 'bg-[#e8f5e9] text-[#2d6a4f] border-[#a5d6a7]' : ''
+              className={`btn-secondary py-3 px-4 text-xs sm:text-sm font-semibold justify-center text-center transition-all ${isCopied ? 'bg-[#e8f5e9] text-[#2d6a4f] border-[#a5d6a7]' : ''
                 }`}
               title="Click to copy email & open Gmail"
             >
@@ -140,7 +140,7 @@ export default function ContactSection() {
               href="https://www.linkedin.com/in/renuka-dhoundiyal01/"
               target="_blank"
               rel="noreferrer"
-              className="btn-secondary py-2 px-3 text-xs justify-center text-center"
+              className="btn-secondary py-3 px-4 text-xs sm:text-sm font-semibold justify-center text-center"
               title="LinkedIn"
             >
               <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn" className="w-4 h-4 object-contain shrink-0" />
@@ -151,7 +151,7 @@ export default function ContactSection() {
               href="https://github.com/Acasia01"
               target="_blank"
               rel="noreferrer"
-              className="btn-secondary py-2 px-3 text-xs justify-center text-center"
+              className="btn-secondary py-3 px-4 text-xs sm:text-sm font-semibold justify-center text-center"
               title="GitHub"
             >
               <img src="https://img.icons8.com/color/48/github--v1.png" alt="GitHub" className="w-4 h-4 object-contain shrink-0" />

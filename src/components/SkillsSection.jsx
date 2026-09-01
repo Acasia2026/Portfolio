@@ -181,25 +181,25 @@ export default function SkillsSection() {
             SKILLS ✦
           </div>
 
-          {/* Cards Grid: Mobile (1-2 cols), Tablet (2-3 cols), Desktop (4 cols) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 relative z-10">
+          {/* Cards Grid: Exactly 2 cards per row on mobile (grid-cols-2), 4 on desktop (grid-cols-4) */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 relative z-10">
             {filteredSkills.map((skill) => (
               <div
                 key={skill.id}
-                className="skills-static-card group"
+                className="skills-static-card group p-3 sm:p-4"
               >
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-2.5 sm:gap-3.5">
                   <div
-                    className="p-2.5 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-white/90 transition-all duration-300"
+                    className="p-2 sm:p-2.5 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-white/90 transition-all duration-300"
                     style={{ backgroundColor: skill.bgColor }}
                   >
-                    <img src={skill.iconUrl} alt={skill.name} className="w-9 h-9 object-contain" />
+                    <img src={skill.iconUrl} alt={skill.name} className="w-7 h-7 sm:w-9 sm:h-9 object-contain" />
                   </div>
-                  <div>
-                    <h3 className="font-bold text-lg text-[#2d2424] group-hover:text-white transition-colors duration-300">
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-bold text-sm sm:text-base text-[#2d2424] group-hover:text-white transition-colors duration-300 leading-snug">
                       {skill.name}
                     </h3>
-                    <p className="text-xs text-[#6e5e5e] group-hover:text-white/90 mt-1 leading-relaxed transition-colors duration-300">
+                    <p className="text-[11px] sm:text-xs text-[#6e5e5e] group-hover:text-white/90 mt-1 leading-snug transition-colors duration-300 line-clamp-2">
                       {skill.desc}
                     </p>
                   </div>
