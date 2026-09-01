@@ -118,21 +118,21 @@ export default function ContactSection() {
           </form>
         )}
 
-        {/* Direct Connect Buttons */}
-        <div className="pt-2.5 border-t border-[#f0e6dc] space-y-2">
+        {/* Direct Connect Buttons: Stack vertically on Mobile (<640px), 3-col on Tablet/Desktop */}
+        <div className="pt-3 border-t border-[#f0e6dc] space-y-2">
           <span className="block text-[10px] font-bold text-[#6e5e5e] uppercase tracking-wider text-center">
             Or Connect Directly
           </span>
 
-          <div className="grid grid-cols-3 gap-1.5">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
             <a
               href="mailto:acasiadl01@gmail.com"
               onClick={handleEmailClick}
-              className={`btn-secondary py-1.5 px-2 text-[11px] justify-center text-center truncate transition-all ${isCopied ? 'bg-[#e8f5e9] text-[#2d6a4f] border-[#a5d6a7]' : ''
+              className={`btn-secondary py-2 px-3 text-xs justify-center text-center transition-all ${isCopied ? 'bg-[#e8f5e9] text-[#2d6a4f] border-[#a5d6a7]' : ''
                 }`}
               title="Click to copy email & open Gmail"
             >
-              <img src="https://img.icons8.com/color/48/gmail-new.png" alt="Email" className="w-3.5 h-3.5 object-contain shrink-0" />
+              <img src="https://img.icons8.com/color/48/gmail-new.png" alt="Email" className="w-4 h-4 object-contain shrink-0" />
               <span>{isCopied ? 'Copied! ✨' : 'Email'}</span>
             </a>
 
@@ -140,10 +140,10 @@ export default function ContactSection() {
               href="https://www.linkedin.com/in/renuka-dhoundiyal01/"
               target="_blank"
               rel="noreferrer"
-              className="btn-secondary py-1.5 px-2 text-[11px] justify-center text-center truncate"
+              className="btn-secondary py-2 px-3 text-xs justify-center text-center"
               title="LinkedIn"
             >
-              <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn" className="w-3.5 h-3.5 object-contain shrink-0" />
+              <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn" className="w-4 h-4 object-contain shrink-0" />
               <span>LinkedIn</span>
             </a>
 
@@ -151,10 +151,10 @@ export default function ContactSection() {
               href="https://github.com/Acasia01"
               target="_blank"
               rel="noreferrer"
-              className="btn-secondary py-1.5 px-2 text-[11px] justify-center text-center truncate"
+              className="btn-secondary py-2 px-3 text-xs justify-center text-center"
               title="GitHub"
             >
-              <img src="https://img.icons8.com/color/48/github--v1.png" alt="GitHub" className="w-3.5 h-3.5 object-contain shrink-0" />
+              <img src="https://img.icons8.com/color/48/github--v1.png" alt="GitHub" className="w-4 h-4 object-contain shrink-0" />
               <span>GitHub</span>
             </a>
           </div>
@@ -162,12 +162,12 @@ export default function ContactSection() {
       </div>
 
       {/* Coffee Cup & Plant Graphic */}
-      <div className="mt-3 pt-2 flex items-center justify-between text-xs text-[#6e5e5e]">
-        <div className="flex items-center gap-1.5 bg-[#fcebeb] px-2.5 py-0.5 rounded-full text-[#c8553d] font-medium text-[11px]">
+      <div className="mt-4 pt-2 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#6e5e5e]">
+        <div className="flex items-center gap-1.5 bg-[#fcebeb] px-3 py-1 rounded-full text-[#c8553d] font-medium text-xs">
           <img src="https://img.icons8.com/color/48/coffee.png" alt="Coffee" className="w-3.5 h-3.5 object-contain" />
           <span>Always up for coffee & code</span>
         </div>
-        <span className="text-lg">🪴</span>
+        <span className="text-lg hidden sm:inline">🪴</span>
       </div>
     </div>
   );

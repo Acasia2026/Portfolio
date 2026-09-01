@@ -148,7 +148,7 @@ export default function SkillsSection() {
 
   return (
     <section id="skills" className="py-4 md:py-6 relative">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8">
         {/* Top Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-5">
           <div>
@@ -159,12 +159,12 @@ export default function SkillsSection() {
           </div>
 
           {/* Category Filter Tabs */}
-          <div className="flex items-center gap-2 mt-4 md:mt-0 overflow-x-auto pb-2">
+          <div className="flex items-center gap-2 mt-3 md:mt-0 overflow-x-auto whitespace-nowrap pb-2 max-w-full">
             {['All', 'Frontend', 'Backend', 'Tools'].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all ${activeCategory === cat
+                className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium shrink-0 transition-all ${activeCategory === cat
                   ? 'bg-[#e06d53] text-white shadow-md'
                   : 'bg-[#fffdf9] text-[#6e5e5e] border border-[#eadecf] hover:border-[#e06d53]'
                   }`}
@@ -177,12 +177,12 @@ export default function SkillsSection() {
 
         {/* Decorative Background Label */}
         <div className="relative">
-          <div className="absolute -top-16 right-4 text-7xl sm:text-9xl font-display font-black text-[#e69a48]/10 pointer-events-none select-none tracking-widest">
+          <div className="absolute -top-16 right-4 text-6xl sm:text-8xl md:text-9xl font-display font-black text-[#e69a48]/10 pointer-events-none select-none tracking-widest overflow-hidden">
             SKILLS ✦
           </div>
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 relative z-10">
+          {/* Cards Grid: Mobile (1-2 cols), Tablet (2-3 cols), Desktop (4 cols) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 relative z-10">
             {filteredSkills.map((skill) => (
               <div
                 key={skill.id}

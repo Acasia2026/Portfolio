@@ -83,8 +83,8 @@ export default function ProjectsPage({ onOpenProjectDemo, onNavigateHome }) {
     <div className="py-8 md:py-12 animate-fade-in relative min-h-screen">
       <div className="max-w-6xl mx-auto px-4 space-y-8">
 
-        {/* 3 Projects per Row Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        {/* Responsive Grid: Mobile (1-col), Tablet (2-col), Desktop (3-col) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 items-stretch">
           {projects.map((project) => (
             <div
               key={project.id}

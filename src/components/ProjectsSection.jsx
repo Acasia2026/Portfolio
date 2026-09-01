@@ -67,7 +67,7 @@ export default function ProjectsSection({ onOpenProjectDemo, onNavigateProjects 
 
   return (
     <section id="projects" className="py-4 md:py-6 relative">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8">
         {/* Header */}
         <div className="flex items-end justify-between mb-4">
           <div>
@@ -84,8 +84,8 @@ export default function ProjectsSection({ onOpenProjectDemo, onNavigateProjects 
           </button>
         </div>
 
-        {/* 3 Projects per Row Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        {/* Responsive Grid: Mobile (1-col), Tablet (2-col), Desktop (3-col) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 items-stretch">
           {projects.map((project) => (
             <div
               key={project.id}

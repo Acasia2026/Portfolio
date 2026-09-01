@@ -71,28 +71,28 @@ export default function App() {
 
             {/* Section 04: Process */}
             <section className="py-4 md:py-6 relative">
-              <div className="max-w-6xl mx-auto px-4">
+              <div className="max-w-6xl mx-auto px-4 sm:px-8">
                 <ProcessSection />
               </div>
             </section>
 
             {/* Section 04: Work Experience */}
             <section className="py-4 md:py-6 relative">
-              <div className="max-w-6xl mx-auto px-4">
+              <div className="max-w-6xl mx-auto px-4 sm:px-8">
                 <ExperienceSection />
               </div>
             </section>
 
             {/* Section 05: Education & Certifications */}
             <section className="py-4 md:py-6 relative">
-              <div className="max-w-6xl mx-auto px-4">
+              <div className="max-w-6xl mx-auto px-4 sm:px-8">
                 <EducationSection />
               </div>
             </section>
 
             {/* Section 06: Contact Form & Connect */}
             <section className="py-4 md:py-6 relative">
-              <div className="max-w-6xl mx-auto px-4">
+              <div className="max-w-6xl mx-auto px-4 sm:px-8">
                 <ContactSection onOpenContact={() => setIsContactOpen(true)} />
               </div>
             </section>

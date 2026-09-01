@@ -3,8 +3,8 @@ import { Heart, Coffee, Sparkles } from './Icons';
 
 export default function Footer({ onOpenContact }) {
   return (
-    <footer className="mt-20 pt-12 pb-8 border-t border-[#eadecf] bg-[#fffdf9]/70 relative">
-      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+    <footer className="mt-16 md:mt-20 pt-10 pb-8 border-t border-[#eadecf] bg-[#fffdf9]/70 relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         {/* Left Column: Brand Bio */}
         <div className="md:col-span-4 space-y-3">
           <div className="flex items-center gap-2">

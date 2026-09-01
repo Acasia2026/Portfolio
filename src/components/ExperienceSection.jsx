@@ -32,8 +32,8 @@ export default function ExperienceSection() {
           <span>💼</span> Work Experience
         </h3>
 
-        {/* 3 Experience Timeline Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+        {/* Experience Timeline Cards: 1 Column on Mobile/Tablet (<1024px), 3 Columns on Desktop (>1024px) */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 relative">
           {experiences.map((exp, idx) => (
             <div
               key={idx}

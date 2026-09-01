@@ -62,18 +62,22 @@ export default function ProcessSection() {
           From Idea → Final Product
         </h3>
 
-        {/* Process Steps Flow with Arrows */}
-        <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-1 sm:gap-2 text-center relative py-2">
+        {/* Process Steps Flow: Grid on Mobile (<768px), Horizontal Pipeline on Desktop (>=768px) */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-row md:items-center md:justify-between gap-3 md:gap-2 text-center relative py-2">
           {steps.map((step, idx) => (
             <React.Fragment key={step.num}>
               <button
                 onClick={() => setActiveStep(idx)}
                 onMouseEnter={() => setActiveStep(idx)}
-                className="flex flex-col items-center group cursor-pointer focus:outline-none flex-1 min-w-[70px] sm:min-w-0"
+                className={`flex flex-col items-center p-2.5 sm:p-3 md:p-0 rounded-xl md:rounded-none transition-all cursor-pointer focus:outline-none flex-1 ${
+                  activeStep === idx
+                    ? 'bg-[#fdf4e7] md:bg-transparent border border-[#f3d4a0] md:border-none shadow-xs md:shadow-none'
+                    : 'bg-[#fffdf9] md:bg-transparent border border-[#eadecf]/60 md:border-none hover:bg-[#faf5ef] md:hover:bg-transparent'
+                }`}
               >
                 {/* Step Circle with Icon */}
                 <div
-                  className={`w-9 h-9 rounded-full flex items-center justify-center mb-1.5 transition-all shadow-xs ${activeStep === idx
+                  className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center mb-1.5 transition-all shadow-xs ${activeStep === idx
                     ? 'scale-110 bg-[#e06d53] ring-4 ring-[#fde5d2]'
                     : 'bg-[#fde5d2] border border-[#f3c8b4] group-hover:scale-105 group-hover:bg-[#fbd3c0]'
                     }`}
@@ -100,9 +104,9 @@ export default function ProcessSection() {
                 </span>
               </button>
 
-              {/* Arrow Connector between steps */}
+              {/* Arrow Connector between steps (Hidden on Mobile/Tablet <768px) */}
               {idx < steps.length - 1 && (
-                <div className="hidden sm:flex items-center justify-center text-[#d8c4b0] shrink-0 -mt-6">
+                <div className="hidden md:flex items-center justify-center text-[#d8c4b0] shrink-0 -mt-6">
                   <ArrowRight className="w-4 h-4 text-[#e06d53]/50" />
                 </div>
               )}
