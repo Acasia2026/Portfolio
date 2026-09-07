@@ -3,10 +3,19 @@ import React from 'react';
 export default function ExperienceSection() {
   const experiences = [
     {
+      role: 'Full Stack Developer Intern',
+      company: 'TechVista Solutions',
+      period: 'Feb 2026 - Aug 2026',
+      desc: 'Assisted senior developers in building responsive full-stack features, actively contributed to code optimization and refactoring for improved performance, and created detailed technical documentation and system workflow guides.',
+      skills: ['React.js', 'JavaScript', 'REST APIs', 'Code Optimization', 'Documentation', 'Git'],
+      iconUrl: 'https://img.icons8.com/color/48/code--v1.png',
+    },
+    {
       role: 'MIS Executive',
       company: 'Go Delivery Pvt Ltd',
       period: 'Dec 2025 - Present',
-      desc: 'Managed and maintained large dataset. Monitored and maintained transactional datasets to ensure accurate reporting and analysis.',
+      desc: 'Managed and maintained large datasets. Monitored and maintained transactional datasets to ensure accurate reporting and analysis.',
+      skills: ['SQL', 'Data Management', 'Analytics'],
       iconUrl: 'https://img.icons8.com/color/48/briefcase.png',
     },
     {
@@ -14,6 +23,7 @@ export default function ExperienceSection() {
       company: 'Unisoft Healthcare Pvt Ltd',
       period: 'Aug 2025 - Dec 2025',
       desc: 'Developed interactive dashboards, bridging the gap between raw data and user-friendly visual interfaces.',
+      skills: ['Dashboards', 'Data Analytics', 'Visualization'],
       iconUrl: 'https://img.icons8.com/color/48/analytics.png',
     },
     {
@@ -21,6 +31,7 @@ export default function ExperienceSection() {
       company: 'Amaze Consulting Services',
       period: 'Sep 2024 - July 2025',
       desc: 'Built interactive data visualizations and wrote extensive technical documentation detailing system logic.',
+      skills: ['Technical Documentation', 'System Logic', 'Visualizations'],
       iconUrl: 'https://img.icons8.com/color/48/combo-chart.png',
     },
   ];
@@ -54,9 +65,22 @@ export default function ExperienceSection() {
                   {exp.company}
                 </p>
 
-                <p className="text-xs sm:text-sm text-[#5c4e4e] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#5c4e4e] leading-relaxed mb-3">
                   {exp.desc}
                 </p>
+
+                {exp.skills && (
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {exp.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="tag-pill text-[10px] sm:text-[11px] px-2 py-0.5"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           ))}

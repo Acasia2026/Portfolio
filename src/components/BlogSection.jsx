@@ -42,6 +42,57 @@ export default function BlogSection({ onOpenBlogPost }) {
       4. Keep side effects predictable and isolated.
       5. Code reviews are for learning, not just finding bugs.`,
     },
+    {
+      id: 4,
+      title: 'Tools I am using in 2026',
+      date: 'September 5, 2026',
+      tag: 'Tools , AI , WebDev',
+      readTime: '5 min read',
+      snippet: 'These tools that can make our work faster and efficient and we should use them instead of coding from scratch',
+      content: `Hey guys, I just want to share about the tools that I’m using to build projects faster nowadays. Instead of spending hours on every small task, I can now move from idea → research → design → MVP → code → testing much faster.
+      Here’s the workflow and tools I currently use:-
+
+      👉 Idea Sharpening
+      - ChatGPT
+      👉Research
+      - Claude
+      👉Design & Inspiration
+      - Dribbble
+      - Mobbin
+      - Pinterest
+      - Stitch
+      - Nano Banana
+      👉MVP & Planning
+      - Lovable
+      - Eraser
+      👉Coding
+      - Claude
+      - Codex
+      👉API Testing
+      - Postman
+      👉AI Models
+      - Gemini
+      - Hugging Face
+      👉Security / Code Review
+      - CodeRabbit
+
+      But there’s one thing I’ve learned while using all these tools that you can generate an entire application with AI, but there are still many things that require proper engineering decisions and manual attention:
+      • Database architecture
+      • Authentication & authorization
+      • Security measures
+      • API design
+      • Scalability
+      • Performance optimization
+      • Error handling
+      • Testing
+      • Deployment & monitoring
+      • Cost optimization
+
+      The future isn't “AI vs developers.”
+      I think it's going to be:
+      Developers who know how to use AI and understand engineering fundamentals
+      Also, Please share your recommendations and any tools that you use that are better than the ones I mentioned. 🙂 `,
+    },
   ];
 
   return (

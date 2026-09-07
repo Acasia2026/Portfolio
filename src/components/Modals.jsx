@@ -319,17 +319,26 @@ export default function Modals({
 
               {/* Experience */}
               <div>
-                <h4 className="font-bold text-base text-[#e06d53] mb-2">Projects & Experience</h4>
+                <h4 className="font-bold text-base text-[#e06d53] mb-2">Work Experience & Projects</h4>
                 <div className="space-y-3">
                   <div className="border-l-2 border-[#e06d53] pl-3">
+                    <div className="flex items-center justify-between">
+                      <h5 className="font-bold text-xs">Full Stack Developer Intern — TechVista Solutions</h5>
+                      <span className="text-[10px] text-[#e06d53] font-semibold">Feb 2026 - Aug 2026</span>
+                    </div>
+                    <p className="text-[11px] text-[#6e5e5e] mt-0.5">
+                      Assisted senior developers, optimized frontend and backend code, created system documentation, and delivered features using React & REST APIs.
+                    </p>
+                  </div>
+                  <div className="border-l-2 border-[#e69a48] pl-3">
                     <h5 className="font-bold text-xs">Recipe Finder Web App</h5>
                     <p className="text-[11px] text-[#6e5e5e]">React, REST APIs, CSS Grid</p>
                   </div>
-                  <div className="border-l-2 border-[#e69a48] pl-3">
+                  <div className="border-l-2 border-[#2d6a4f] pl-3">
                     <h5 className="font-bold text-xs">Task Management Dashboard</h5>
                     <p className="text-[11px] text-[#6e5e5e]">React, Django, SQL</p>
                   </div>
-                  <div className="border-l-2 border-[#2d6a4f] pl-3">
+                  <div className="border-l-2 border-[#3178c6] pl-3">
                     <h5 className="font-bold text-xs">Full-Stack E-Commerce Store</h5>
                     <p className="text-[11px] text-[#6e5e5e]">Django, JavaScript, HTML/CSS</p>
                   </div>
